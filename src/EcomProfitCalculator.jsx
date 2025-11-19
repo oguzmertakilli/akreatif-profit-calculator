@@ -55,31 +55,32 @@ const profitMargin = totalCost > 0 ? (netProfit / totalCost) * 100 : 0;
             </div>
           </div>
 
-          <div className="mt-8 p-3 rounded-xl flex items-end gap-4" style={{ backgroundColor: "#f5d5de" }}>
-            <div className="flex-1">
-              <Label>Hedef Kar Marjı (%)</Label>
-              <Input
-                type="number"
-                className="mt-1"
-                value={targetMargin}
-                onChange={(e) => setTargetMargin(Number(e.target.value))}
-              />
-            </div>
-          <Button
-            onClick={handleTargetClick}
-            className="
-              h-12 px-6 mt-auto 
-              bg-[#ff8a3d] 
-              hover:bg-[#c15563] 
-              active:bg-[#a44954]
-              text-white font-medium 
-              rounded-lg 
-              transition-all
-              "
-            >
-              Hedef Satış Fiyatını Hesapla
-            </Button>
-          </div>
+          <div
+  className="mt-8 p-4 rounded-xl flex flex-col md:flex-row items-start md:items-end gap-4"
+  style={{ backgroundColor: "#f5d5de" }}
+>
+  <div className="flex-1 w-full">
+    <Label className="font-medium">Hedef Kar Marjı (%)</Label>
+    <Input
+      type="number"
+      className="mt-1 w-full"
+      value={targetMargin}
+      onChange={(e) => setTargetMargin(Number(e.target.value))}
+    />
+  </div>
+
+  <Button
+    onClick={handleTargetClick}
+    className="h-10 w-full md:w-auto text-white font-medium"
+    style={{
+      backgroundColor: "#f28c3a", // turuncu renk
+      borderRadius: 8,
+    }}
+  >
+    Hedef Satış Fiyatını Hesapla
+  </Button>
+</div>
+
         </CardContent>
       </Card>
     </div>
