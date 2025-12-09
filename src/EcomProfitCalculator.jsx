@@ -32,7 +32,7 @@ const profitMargin = totalCost > 0 ? (netProfit / totalCost) * 100 : 0;
   };
 
   return (
-    <div className="w-full h-auto p-0 m-0 bg-transparent">
+    <div className="w-full min-h-screen flex flex-col p-0 m-0 bg-white">
       <Card className="shadow-xl">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold">Pazaryeri Kâr Hesaplayıcı</CardTitle>
